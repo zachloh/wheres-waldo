@@ -1,1 +1,30 @@
+@font-face {
+  font-family: 'roboto';
+  src: url('./assets/fonts/roboto-regular-webfont.woff2') format('woff2'),
+    url('./assets/fonts/roboto-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body,
+#root,
+#root > div {
+  height: 100%;
+}
