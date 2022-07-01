@@ -28,3 +28,12 @@ body,
 #root > div {
   height: 100%;
 }
+
+body {
+  overflow: auto;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
