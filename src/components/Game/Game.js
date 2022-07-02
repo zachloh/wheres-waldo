@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Header from './Header/Header';
 import Dropdown from './Dropdown/Dropdown';
 import background from '../../assets/images/background.jpg';
 import styles from './Game.module.css';
@@ -57,6 +58,7 @@ const Game = () => {
 
   return (
     <div className={styles.container}>
+      <Header />
       <img
         src={background}
         alt="cyberpunk themed poster"
