@@ -1,11 +1,14 @@
 .dropdown {
   position: absolute;
   top: -35px;
-  left: 70px;
   text-align: center;
   background-color: #000;
   border: 2px solid #fff;
   border-radius: 5px;
+}
+
+.left {
+  left: 70px;
 }
 
 .dropdown::before {
@@ -17,6 +20,17 @@
   border-width: 5px;
   border-style: solid;
   border-color: transparent #fff transparent transparent;
+}
+
+.right {
+  left: auto;
+  right: 70px;
+}
+
+.right::before {
+  transform: translate(0, -50%);
+  left: 99px;
+  border-color: transparent transparent transparent #fff;
 }
 
 .dropdown button {

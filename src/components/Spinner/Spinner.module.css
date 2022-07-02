@@ -1,0 +1,32 @@
+.background {
+  display: block;
+  width: 100vw;
+  height: auto;
+  filter: blur(10px);
+}
+
+.spinner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main {
+  stroke-dasharray: 50;
+  stroke-dashoffset: 0;
+  animation: load 1s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes load {
+  0% {
+    stroke-dashoffset: 50;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -50;
+  }
+}

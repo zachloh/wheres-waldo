@@ -6,6 +6,7 @@
   display: flex;
   align-items: center;
   padding: 10px 0;
+  z-index: 10;
 }
 
 .images {
@@ -17,6 +18,10 @@
 .images img {
   height: 75px;
   width: 55px;
+}
+
+.found {
+  filter: grayscale(100%);
 }
 
 .timer {

@@ -11,19 +11,21 @@ const targetMarkerStyle = {
 };
 
 export const useMarkTarget = () => {
-  const [targetStyle, setTargetStyle] = useState({
+  const [target, setTarget] = useState({
     show: false,
     markerStyle: {},
     dropDownStyle: {},
+    markedPositions: {},
   });
 
-  const markTarget = (x, y) => {
-    setTargetStyle((prev) => {
+  const markTarget = (x, y, imageHeight) => {
+    setTarget((prev) => {
       if (prev.show) {
         return {
           show: false,
           markerStyle: {},
           dropDownStyle: {},
+          markedPositions: {},
         };
       }
 
@@ -31,18 +33,29 @@ export const useMarkTarget = () => {
         show: true,
         markerStyle: {
           ...targetMarkerStyle,
-          top: `${y}vh`,
-          left: `${x}vw`,
+          top: `${((y * imageHeight) / window.innerHeight) * 100}vh`,
+          left: `${x * 100}vw`,
         },
         dropDownStyle: {
           position: 'absolute',
         },
+        markedPositions: { x, y },
       };
     });
   };
 
+  const unmark = () => {
+    setTarget({
+      show: false,
+      markerStyle: {},
+      dropDownStyle: {},
+      markedPositions: {},
+    });
+  };
+
   return {
-    targetStyle,
+    target,
     markTarget,
+    unmark,
   };
 };

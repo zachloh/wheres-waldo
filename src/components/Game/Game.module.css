@@ -8,3 +8,49 @@
   height: auto;
   cursor: pointer;
 }
+
+.blur {
+  display: block;
+  width: 100vw;
+  height: auto;
+  filter: blur(10px);
+}
+
+.end {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border: 3px solid #fff;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.restart {
+  margin-top: 30px;
+  font-family: inherit;
+  font-size: 1.2rem;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.restart:hover,
+.restart:focus-visible {
+  background-color: #ddd;
+  color: #000;
+  outline: 2px solid #000;
+  outline-offset: -3px;
+}
+
+.restart:active {
+  transform: scale(0.95);
+}
