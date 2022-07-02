@@ -3,7 +3,6 @@ import Header from './Header/Header';
 import Dropdown from './Dropdown/Dropdown';
 import background from '../../assets/images/background.jpg';
 import styles from './Game.module.css';
-import { doc } from 'firebase/firestore';
 
 const targetMarkerStyle = {
   position: 'absolute',
@@ -14,8 +13,6 @@ const targetMarkerStyle = {
   borderRadius: '50%',
   cursor: 'pointer',
 };
-
-const characterDropDownStyle = {};
 
 const Game = () => {
   const [targetStyle, setTargetStyle] = useState({
