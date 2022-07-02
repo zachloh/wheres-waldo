@@ -5,7 +5,7 @@ import phineas from '../../assets/images/phineas.png';
 import ash from '../../assets/images/ash.png';
 import styles from './Introduction.module.css';
 
-const Introduction = () => {
+const Introduction = ({ onGameStart }) => {
   return (
     <div className={styles.container}>
       <img
@@ -29,7 +29,9 @@ const Introduction = () => {
             <p>Ash</p>
           </div>
         </div>
-        <button className={styles.start}>Start Game</button>
+        <button onClick={onGameStart} className={styles.start}>
+          Start Game
+        </button>
       </div>
     </div>
   );

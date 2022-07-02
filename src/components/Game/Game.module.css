@@ -1,0 +1,10 @@
+.container {
+  height: auto !important;
+}
+
+.background {
+  display: block;
+  width: 100vw;
+  height: auto;
+  cursor: pointer;
+}
